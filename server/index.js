@@ -27,6 +27,7 @@ app.post('/api/upload',  async (req , res , next)=>{
             teamname : teamname,
             regno : regno,
             points : marks,
+            time : new Date(),
         }
     );
     return res.json({status : true});

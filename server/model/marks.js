@@ -19,6 +19,10 @@ const marksSchema = new Schema(
         points:{
             type:Number,
             require:true,
+        },
+        time:{
+            type: Date  ,
+            default:Date.now,
         }
     },
 );
