@@ -44,7 +44,6 @@ export default function Crossword({info}){
     
     const downstarting =info.downstarting;
     const downwords = info.downwords;
-    
     const acrossstarting= info.acrossstarting;
     const acrosswords = info.acrosswords;
 
@@ -94,7 +93,6 @@ export default function Crossword({info}){
       if(data.data.status === false){
         toast.error(data.data.msg , toastOptions);
       }else{
-
         navigate('/thankyou');
       }
     };
