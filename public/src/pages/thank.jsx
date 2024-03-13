@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export default function Thank(){
     return( 
         <Container>
-            THANK YOU
+            THANK YOU 
         </Container>
     )    
 }

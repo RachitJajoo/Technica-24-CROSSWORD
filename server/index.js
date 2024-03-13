@@ -21,7 +21,6 @@ app.post('/api/upload',  async (req , res , next)=>{
 
     const user = await Marks.findOne({regno});
     if( user ) return res.json({status: false, msg : "You can only submit the form once."});
-    console.log(marks);
     const data = await Marks.create(
         {
             name : name ,

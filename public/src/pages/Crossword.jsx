@@ -93,6 +93,7 @@ export default function Crossword({info}){
       if(data.data.status === false){
         toast.error(data.data.msg , toastOptions);
       }else{
+        localStorage.removeItem('user');
         navigate('/thankyou');
       }
     };
