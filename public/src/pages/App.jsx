@@ -1152,6 +1152,7 @@ export default function App() {
         5. Immersive workshop delving into designing, analyzing data structures, algorithms—learning from scratch
         7. At Gravitas'22, we crafted an electrifying bot for our thrilling event. What was the name of that event 
         9. our event in RIVIERA'23.`,
+      index: 0,
     },
     {
       arr: [
@@ -2418,17 +2419,18 @@ export default function App() {
         "PYGAME",
       ],
 
-      across: `3. Immersive workshop delving into designing, analyzing data structures, algorithms—learning from scratch
-            4. ISTE-VIT's grand tech fest: workshops, hackathon—where innovation takes flight!
-            5. ISTE's electrical event in graVITas'23 
-            7. Nishchay Singh's webinar: Secure data insights, online threat defense, Google efficiency! 
-            8. The hackathon's key supporter: our esteemed title sponsor 
+      across: `3. Immersive workshop delving into designing, analyzing data structures, algorithms—learning from scratch <br/>
+           <p> 4. ISTE-VIT's grand tech fest: workshops, hackathon—where innovation takes flight!</p>
+            5. ISTE's electrical event in graVITas'23 <p>
+            7. Nishchay Singh's webinar: Secure data insights, online threat defense, Google efficiency!<p> 
+            8. The hackathon's key supporter: our esteemed title sponsor <p>
             10. Gravitas'23 workshop: Crafting a captivating game, starting from absolute scratch..`,
       down: `1. Empower buyers to shop locally with a QR-scanning webapp marvel. 
             2. ISTE-VIT's initiative: inspiring young minds through knowledge in school outreach
             6. Gravitas 2023: A spectacle event featuring ideation, code challenges, lightning research, and tech quizzing 
             9. Gravitas'22 workshop: Crafting NFTs from scratch and mastering website minting 
             `,
+      index: 1,
     },
     {
       arr: [
@@ -3220,18 +3222,19 @@ export default function App() {
       ],
 
       down: `
-            1.Our google forms quiz which was an insight on data structure and algorithm.\n
-            2. Gravitas'23 workshop: Crafting a captivating game, starting from absolute scratch.\n
-            4. Empower buyers to shop locally with a QR-scanning webapp marvel.\n
-            7. Gravitas'23 workshop: Crafting a captivating game, starting from absolute scratch.\n
+            1.Our google forms quiz which was an insight on data structure and algorithm
+            2. Gravitas'23 workshop: Crafting a captivating game, starting from absolute scratch.
+            4. Empower buyers to shop locally with a QR-scanning webapp marvel.
+            7. Gravitas'23 workshop: Crafting a captivating game, starting from absolute scratch.
             `,
       across: `
-            3. At Gravitas'23, ISTE sparkled with an event crafting health innovation.<br/>
-            5. Gravitas '22: Electrifying competition embracing tech, management, design, aptitude—student excellence unleashed!<br/>
-            6. The hackathon's key supporter: our esteemed title sponsor<br/>
-            8. Nishchay Singh's webinar: Secure data insights, online threat defense, Google efficiency!<br/>
-            9. A remarkable fusion: three dynamic workshops and an exhilarating 36-hour hackathon.<br/>
+            3. At Gravitas'23, ISTE sparkled with an event crafting health innovation.
+            5. Gravitas '22: Electrifying competition embracing tech, management, design, aptitude—student excellence unleashed!
+            6. The hackathon's key supporter: our esteemed title sponsor
+            8. Nishchay Singh's webinar: Secure data insights, online threat defense, Google efficiency!
+            9. A remarkable fusion: three dynamic workshops and an exhilarating 36-hour hackathon.
             10. Horizon '21 workshop: Photoshop, craft UI/UX with Adobe XD—launch design career!`,
+      index: 2,
     },
   ];
   const navigate = useNavigate();

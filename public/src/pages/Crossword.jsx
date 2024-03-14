@@ -101,20 +101,91 @@ export default function Crossword({ info }) {
       navigate("/thankyou");
     }
   };
+  const index = info.index;
   return (
     <>
       <Container>
         <div className="crossDiv">
           <div className="container">
             <div className="Questions">
-              <p>
-                ACROSS
-                <br />
-                {info.across} <br />
-                DOWN <br />
-                {info.down}
-                <br />
-              </p>
+              {index === 0 ? (
+                <div>
+                  ACROSS: <br />
+                  1. Elevate awareness through an enlightening webinar on
+                  combating substance
+                  <br />
+                  4. ISTE's electrical event in graVITas'23
+                  <br />
+                  6. Our google forms quiz which was an insight on data
+                  structure and algorithm
+                  <br />
+                  8. Tuesday's Instagram story unveiled the beauty of
+                  cutting-edge technologies
+                  <br />
+                  10. Name of the hackathon <br /> <br />
+                  DOWN: <br />
+                  2. Empower buyers to shop locally with a QR-scanning webapp
+                  marvel <br />
+                  3. Effortless dining: App updates restaurant seating, ensuring
+                  comfort and efficiency <br />
+                  5. Immersive workshop delving into designing, analyzing data
+                  structures, algorithms—learning from scratch <br />
+                  7. At Gravitas'22, we crafted an electrifying bot for our
+                  thrilling event. What was the name of that event <br />
+                  9. our event in RIVIERA'23.`
+                </div>
+              ) : index === 1 ? (
+                <div>
+                  {" "}
+                  ACROSS: <br />
+                  3. Immersive workshop delving into designing, analyzing data
+                  structures, algorithms—learning from scratch <br />
+                  4. ISTE-VIT's grand tech fest: workshops, hackathon—where
+                  innovation takes flight! <br />
+                  5. ISTE's electrical event in graVITas'23 <br />
+                  7. Nishchay Singh's webinar: Secure data insights, online
+                  threat defense, Google efficiency! <br />
+                  8. The hackathon's key supporter: our esteemed title sponsor{" "}
+                  <br />
+                  10. Gravitas'23 workshop: Crafting a captivating game,
+                  starting from absolute scratch.. <br /> <br />
+                  DOWN: <br />
+                  1. Empower buyers to shop locally with a QR-scanning webapp
+                  marvel. <br />
+                  2. ISTE-VIT's initiative: inspiring young minds through
+                  knowledge in school outreach <br />
+                  6. Gravitas 2023: A spectacle event featuring ideation, code
+                  challenges, lightning research, and tech quizzing <br />
+                  9. Gravitas'22 workshop: Crafting NFTs from scratch and
+                  mastering website minting
+                </div>
+              ) : (
+                <div>
+                  ACROSS: <br />
+                  3. At Gravitas'23, ISTE sparkled with an event crafting health
+                  innovation. <br />
+                  5. Gravitas '22: Electrifying competition embracing tech,
+                  management, design, aptitude—student excellence unleashed!{" "}
+                  <br />
+                  6. The hackathon's key supporter: our esteemed title sponsor{" "}
+                  <br />
+                  8. Nishchay Singh's webinar: Secure data insights, online
+                  threat defense, Google efficiency! <br />
+                  9. A remarkable fusion: three dynamic workshops and an
+                  exhilarating 36-hour hackathon. <br />
+                  10. Horizon '21 workshop: Photoshop, craft UI/UX with Adobe
+                  XD—launch design career! <br /> <br />
+                  DOWN: <br />
+                  1.Our google forms quiz which was an insight on data structure
+                  and algorithm <br />
+                  2. Gravitas'23 workshop: Crafting a captivating game, starting
+                  from absolute scratch. <br />
+                  4. Empower buyers to shop locally with a QR-scanning webapp
+                  marvel. <br />
+                  7. Gravitas'23 workshop: Crafting a captivating game, starting
+                  from absolute scratch.
+                </div>
+              )}
             </div>
             <form name="CROSSWORDRESULT" onSubmit={calculateMarks}>
               <div className="crossword">
@@ -170,12 +241,11 @@ const Container = styled.div`
   background-image: url(${backgroundImage});
   background-size: cover;
   .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
     align-items: center;
     color: white;
+
+    display: flex;
+    gap: 2rem;
   }
   .cell {
     width: 1rem;
@@ -185,5 +255,16 @@ const Container = styled.div`
   }
   .Questions {
     font-size: 1.2rem;
+    font-size: 1.2rem;
+    width: 40%;
+  }
+  .crossword {
+    width: 60%;
+  }
+  .row {
+    display: flex;
+  }
+  .button {
+    margin-top: 1rem;
   }
 `;

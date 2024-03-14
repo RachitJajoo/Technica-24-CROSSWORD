@@ -72,7 +72,7 @@ export default function SignIn() {
 
 const FormContainer = styled.div`
   height: 100vh;
-  width: 100vw;
+  width: fit-screen;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -104,14 +104,14 @@ const FormContainer = styled.div`
   }
   input {
     background-color: transparent;
-    padding: 1rem;
+    padding: 0.5rem;
     border: 0.1rem solid #ffffff;
     border-radius: 0.7rem;
     color: white;
     width: 100%;
     font-size: 1rem;
     &:focus {
-      border: 0.1rem solid #ffffff;
+      border: 0.1rem solid #27a5ef;
       outline: none;
     }
   }

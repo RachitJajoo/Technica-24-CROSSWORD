@@ -4,7 +4,7 @@ body {
 
 .rectangle {
   width: 30%;
-  height: 88vh;
+  height: fit-content;
   margin-top: 2vh;
   flex-shrink: 0;
   min-width: 500px;
@@ -67,7 +67,7 @@ body {
 }
 
 .thank {
-  font-size: larger;
+  font-size: 70px;
   font-weight: bolder;
   text-shadow: 0 0 10px white;
 }
