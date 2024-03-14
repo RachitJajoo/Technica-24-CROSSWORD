@@ -1,33 +1,31 @@
-import { useState ,useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import styled from 'styled-components';
-import backgroundImage from '../assets/bckgrnd.png';
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import styled from "styled-components";
+import backgroundImage from "../assets/bggg.png";
+import "./index.css";
 
-
-
-export default function SignIn(){
-
+export default function SignIn() {
   const navigate = useNavigate();
 
-
-  
-  let [formlabel , setformlabel] = useState({
-    name : '',
-    teamname : '',
-    regno : '',
+  let [formlabel, setformlabel] = useState({
+    name: "",
+    teamname: "",
+    regno: "",
   });
 
-
-  const handleSubmit = async (event)=>{
-    event.preventDefault(); 
-    localStorage.setItem('user' , JSON.stringify({
-      name : formlabel.name,
-      regno : formlabel.regno,
-      teamname : formlabel.teamname,
-    }));
-    navigate('/');
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    localStorage.setItem(
+      "user",
+      JSON.stringify({
+        name: formlabel.name,
+        regno: formlabel.regno,
+        teamname: formlabel.teamname,
+      })
+    );
+    navigate("/");
   };
-     
+
   const handleChange = (event) => {
     setformlabel((prevFormLabel) => ({
       ...prevFormLabel,
@@ -35,10 +33,11 @@ export default function SignIn(){
     }));
   };
 
-    
-    return (
-      <>
-        <FormContainer>
+  return (
+    <>
+      <FormContainer>
+        <div className="rectangle">
+          <h1>Register</h1>
           <form action="" onSubmit={(event) => handleSubmit(event)}>
             <input
               type="text"
@@ -61,12 +60,15 @@ export default function SignIn(){
               onChange={(e) => handleChange(e)}
               required
             />
-            <button type="submit">Enter</button>
+            <button className="button" type="submit">
+              Enter
+            </button>
           </form>
-        </FormContainer>
-     </>
-  )
-};
+        </div>
+      </FormContainer>
+    </>
+  );
+}
 
 const FormContainer = styled.div`
   height: 100vh;
@@ -96,20 +98,20 @@ const FormContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    
+
     border-radius: 2rem;
     padding: 3rem 5rem;
   }
   input {
     background-color: transparent;
     padding: 1rem;
-    border: 0.1rem solid #4e0eff;
-    border-radius: 0.4rem;
+    border: 0.1rem solid #ffffff;
+    border-radius: 0.7rem;
     color: white;
     width: 100%;
     font-size: 1rem;
     &:focus {
-      border: 0.1rem solid #997af0;
+      border: 0.1rem solid #ffffff;
       outline: none;
     }
   }
@@ -137,6 +139,3 @@ const FormContainer = styled.div`
     }
   }
 `;
-  
-  
-  
