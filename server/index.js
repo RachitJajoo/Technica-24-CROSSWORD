@@ -17,7 +17,9 @@ mongoose
 
 app.use(cors());
 app.use(express.json());
-
+app.get("/" , ()=>{
+  console.log("Root Directory");
+});
 app.post("/api/upload", async (req, res, next) => {
   try {
     const { name, teamname, regno, marks } = req.body;
