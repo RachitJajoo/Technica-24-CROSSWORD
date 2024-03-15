@@ -7,6 +7,7 @@ import axios from "axios";
 import { upload } from "../utils/APIroutes";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "./index.css";
 
 export default function Crossword({ info }) {
   const navigate = useNavigate();
@@ -106,8 +107,8 @@ export default function Crossword({ info }) {
     <>
       <Container>
         <div className="crossDiv">
-          <div className="container">
-            <div className="Questions">
+          <div className="container ">
+            <div className="Questions div1">
               {index === 0 ? (
                 <div>
                   ACROSS: <br />
@@ -188,7 +189,7 @@ export default function Crossword({ info }) {
               )}
             </div>
             <form name="CROSSWORDRESULT" onSubmit={calculateMarks}>
-              <div className="crossword">
+              <div className="crossword div2">
                 {grid.map((row, rowIndex) => (
                   <div className="row" key={rowIndex}>
                     {row.map((cell, colIndex) =>
