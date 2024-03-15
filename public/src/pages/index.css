@@ -72,7 +72,7 @@
   text-shadow: 0 0 10px white;
 } */
 body {
-  margin: none;
+  margin: 0;
 }
 html, body {
   width: 100%;
@@ -93,6 +93,7 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center; 
+  padding: 5rem;
 }
 .rectangle {
   width: 30%;
@@ -123,6 +124,22 @@ html, body {
 
 .button {
   justify-content: center;
+  align-items: center;
+  background-color: #4e0eff;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+}
+
+/* Existing CSS styles */
+
+.button {
   background-color: #4e0eff;
   color: white;
   margin-top: 30px;
@@ -134,31 +151,13 @@ html, body {
   font-size: 1rem;
   text-transform: uppercase;
   transition: background-color 0.3s;
+  display: block; /* Ensure it occupies full width */
+  margin: 0 auto; /* Center horizontally */
 }
 
 .button:hover {
   background-color: #652eff;
   box-shadow: 0 0 10px 5px white;
-}
-
-.crossDiv {
-  margin: none;
-  width: 100%;
-  height: 100vh;
-  margin-top: 2vh;
-  flex-shrink: 0;
-  min-width: 500px;
-  border-radius: 50px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  overflow: auto;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
 }
 
 @media (max-width: 768px) {

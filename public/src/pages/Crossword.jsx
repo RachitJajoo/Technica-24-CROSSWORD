@@ -106,6 +106,8 @@ export default function Crossword({ info }) {
   return (
     <>
       <Container>
+     
+
         <div className="crossDiv">
           <div className="container ">
             <div className="Questions div1">
@@ -188,8 +190,8 @@ export default function Crossword({ info }) {
                 </div>
               )}
             </div>
-            <form name="CROSSWORDRESULT" onSubmit={calculateMarks}>
               <div className="crossword div2">
+              <form name="CROSSWORDRESULT" onSubmit={calculateMarks}>
                 {grid.map((row, rowIndex) => (
                   <div className="row" key={rowIndex}>
                     {row.map((cell, colIndex) =>
@@ -220,13 +222,14 @@ export default function Crossword({ info }) {
                     )}
                   </div>
                 ))}
+              </form>
               </div>
-              <button className="button" onClick={calculateMarks}>
+              
+            </div>
+            <button className="button" onClick={calculateMarks}>
                 {" "}
                 Submit{" "}
               </button>
-            </form>
-          </div>
         </div>
       </Container>
       <ToastContainer />
