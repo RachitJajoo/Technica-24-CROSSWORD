@@ -7,6 +7,14 @@ import "./index.css";
 export default function SignIn() {
   const navigate = useNavigate();
 
+  useEffect(()=>{
+    const getsuer = async()=>{
+      const data = await localStorage.getItem('user');
+      if(data){
+        navigate("/");
+      }
+    }
+  },[])
   let [formlabel, setformlabel] = useState({
     name: "",
     teamname: "",
